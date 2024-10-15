@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: linear-gradient(135deg,#00feba,#5b548a);
+    padding: 20px;
+    margin-left: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+.date-container {
+    background-image: url('https://img.freepik.com/free-psd/calendar-date-icon-illustration_23-2151261479.jpg?t=st=1713091815~exp=1713095415~hmac=948e235ccea55cb81cda49336cff87fe230018b3196dbbb380636aa1024b8ac1&w=740');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease;
+}
+
+.date-container:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.tempcontainer {
+    max-width: 100px;
+    margin: 20px auto;
+    margin-left: 20px;
+    background-image: url('https://img.freepik.com/free-photo/3d-sun-studio_23-2151021302.jpg?t=st=1712903458~exp=1712907058~hmac=8576e0b1e59a042c780d9e8696d115ecafbf3c9f9a50ccd1e8f167ededcb4a7a&w=740');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+.humcontainer{
+    max-width: 100px;
+    margin: 20px auto;
+    margin-left: 20px;
+    background-image: url('https://img.freepik.com/free-photo/ai-generated-3d-water_23-2150684747.jpg?t=st=1712904171~exp=1712907771~hmac=906633ed7a21ed611b8db2ff8464a187cd204548de007b5d1a87e8a6e6def636&w=740');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    padding: 20px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+.wcontainer{
+    max-width: 100px;
+    margin: 20px auto;
+    margin-left: 20px;
+    background-image: url('https://img.freepik.com/free-photo/paper-cutout-cloud-with-word-cloud-it_1340-35188.jpg?t=st=1712904257~exp=1712907857~hmac=d0c9b562ef480b95da0714820b1f5e8ddac385912d9795c34012bde17922a8bf&w=740');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    padding: 20px;
+    height: 100px; 
+    transition: transform 0.3s ease;
+}
+.wscontainer{
+    max-width: 100px;
+    padding: 20px;
+    margin: 20px auto;
+    margin-left: 20px;
+    background-image: url('https://medias.netatmo.com/content/c1eaa2c6-a658-4a78-bbfd-49698db5367b.jpg/:/rs=w:718,h:403,ft:cover,i:true/fm=f:webp');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    height: 100px; 
+    transition: transform 0.3s ease;
+}
+.tempcontainer:hover,
+.humcontainer:hover,
+.wcontainer:hover,
+.wscontainer:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+p{
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#weatherDisplay {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#forecastDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+#forecastDisplay div {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #forecastDisplay {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CSS styles for the forecast table */
+.forecast-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.forecast-table th,
+.forecast-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.forecast-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.weather-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.temperature {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.weather-details {
+    font-size: 1.2em;
+}
+
